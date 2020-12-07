@@ -5,4 +5,7 @@ scikit-learn
 opencv-python
 h5py
 matplotlib
-pypiwin32
+pandas
+numpy
+pillow
+matplotlib
