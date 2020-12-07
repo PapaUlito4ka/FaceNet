@@ -195,6 +195,13 @@ def img_to_encoding(image_path, model):
     embedding = model.predict_on_batch(x_train)
     return embedding
 
+def img_to_encoding_webcam(image, model):
+    img1 = cv2.resize(image, (96, 96)) 
+    img = np.around(np.transpose(img1, (0,1,2))/255.0, decimals=12)
+    x_train = np.array([img])
+    embedding = model.predict_on_batch(x_train)
+    return embedding
+
 def load_database(model):
     database = {
         'Artem': [],
